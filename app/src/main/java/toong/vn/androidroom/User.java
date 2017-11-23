@@ -15,6 +15,9 @@ public class User {
     @ColumnInfo(name = "last_name")
     private String lastName;
 
+    @ColumnInfo(name = "age")
+    private Integer age;
+
     public int getUid() {
         return uid;
     }
@@ -37,5 +40,13 @@ public class User {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
     }
 }
