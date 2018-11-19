@@ -1,4 +1,6 @@
-package toong.vn.androidroom;
+package toong.vn.androidroom.data.model;
+
+import toong.vn.androidroom.data.model.User;
 
 /**
  * Created by PhanVanLinh on 23/11/2017.

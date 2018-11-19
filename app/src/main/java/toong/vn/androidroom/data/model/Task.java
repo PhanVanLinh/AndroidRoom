@@ -1,4 +1,4 @@
-package toong.vn.androidroom;
+package toong.vn.androidroom.data.model;
 
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;

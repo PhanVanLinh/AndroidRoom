@@ -1,11 +1,13 @@
-package toong.vn.androidroom;
+package toong.vn.androidroom.data.local;
 
 import android.arch.persistence.room.Database;
 import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
-import toong.vn.androidroom.dao.TaskDao;
-import toong.vn.androidroom.dao.UserDao;
+import toong.vn.androidroom.data.local.dao.TaskDao;
+import toong.vn.androidroom.data.local.dao.UserDao;
+import toong.vn.androidroom.data.model.Task;
+import toong.vn.androidroom.data.model.User;
 
 @Database(entities = { User.class, Task.class }, version = 1)
 public abstract class AppDatabase extends RoomDatabase {

@@ -1,4 +1,4 @@
-package toong.vn.androidroom.dao;
+package toong.vn.androidroom.data.local.dao;
 
 import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Delete;
@@ -7,9 +7,9 @@ import android.arch.persistence.room.Query;
 import io.reactivex.Maybe;
 import io.reactivex.Single;
 import java.util.List;
-import toong.vn.androidroom.DisplayUser;
-import toong.vn.androidroom.User;
-import toong.vn.androidroom.UserAndTask;
+import toong.vn.androidroom.data.model.DisplayUser;
+import toong.vn.androidroom.data.model.User;
+import toong.vn.androidroom.data.model.UserAndTask;
 
 @Dao
 public interface UserDao {

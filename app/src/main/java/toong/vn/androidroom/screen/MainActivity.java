@@ -1,4 +1,4 @@
-package toong.vn.androidroom;
+package toong.vn.androidroom.screen;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +7,11 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Action;
 import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
+import toong.vn.androidroom.R;
+import toong.vn.androidroom.data.local.AppDatabase;
+import toong.vn.androidroom.data.model.Task;
+import toong.vn.androidroom.data.model.User;
+
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,16 +22,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         AppDatabase db = AppDatabase.getAppDatabase(this);
-
         Observable.just(db).subscribeOn(Schedulers.io()).subscribe(new Consumer<AppDatabase>() {
             @Override
             public void accept(AppDatabase appDatabase) throws Exception {
-                //                prepareData(appDatabase);
-                //                prepareTask(appDatabase);
-
-                //                appDatabase.userDao().getAll2();
-                //                appDatabase.userDao().getAllUserWithNoOfTask();
-
                 appDatabase.userDao()
                         .rxGetAllSingle()
                         .subscribeOn(Schedulers.io())
